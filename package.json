@@ -4,24 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run build:css && next build",
-    "start": "concurrently -n Tailwind, React 'yarn run watch:css' 'next start'",
-    "build:css": "tailwind build src/App.css -o src/index.css",
-    "watch:css": "chokidar 'src/App.css' -c 'npm run build:css'"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "autoprefixer": "^10.2.5",
     "next": "10.2.0",
-    "postcss-cli": "^8.3.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "tailwindcss": "^2.1.2"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/node": "^15.0.2",
     "@types/react": "^17.0.5",
-    "chokidar-cli": "^2.1.0",
-    "concurrently": "^6.0.2",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2",
     "typescript": "^4.2.4"
   }
 }
